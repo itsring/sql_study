@@ -1,13 +1,13 @@
---ÇÑÁÙ ÁÖ¼® ´ÜÃàÅ°´Â ´Ù¸¥ ¿¡µğÅÍ¶û °°À½ CTRL /
+--í•œì¤„ ì£¼ì„ ë‹¨ì¶•í‚¤ëŠ” ë‹¤ë¥¸ ì—ë””í„°ë‘ ê°™ìŒ CTRL /
 /* 
-    ¿©·¯ÁÙ ÁÖ¼®
+    ì—¬ëŸ¬ì¤„ ì£¼ì„
 */
--- Å×ÀÌºíÀÇ ¸ğµç iÇà°ú ¿­À» ÀĞ¾î¿À±â
+-- í…Œì´ë¸”ì˜ ëª¨ë“  ií–‰ê³¼ ì—´ì„ ì½ì–´ì˜¤ê¸°
 
-SELECT * --ÀüÃ¼ ¿­
-FROM departments; -- departments Å×ÀÌºí¿¡¼­
+SELECT * --ì „ì²´ ì—´
+FROM departments; -- departments í…Œì´ë¸”ì—ì„œ
 
--- Æ¯Á¤ ¿­¸¸ Á¶È¸ÇÏ±â
+-- íŠ¹ì • ì—´ë§Œ ì¡°íšŒí•˜ê¸°
 
 SELECT
     department_id, department_name
@@ -15,4 +15,47 @@ FROM departments;
 
 SELECT
     employee_id, first_name, last_name
+FROM employees;
+
+-- ë³„ì¹­ ë¶™ì´ê¸°
+SELECT
+    department_id as ë¶€ì„œë²ˆí˜¸, department_name as ë¶€ì„œì´ë¦„
+FROM departments;
+
+-- ì‚°ìˆ  ì—°ì‚°ì + - / * 
+SELECT
+    first_name ì´ë¦„, job_id ì§ì±…, salary ì›”ê¸‰
+FROM employees;
+
+SELECT
+    first_name ì´ë¦„, job_id ì§ì±…, salary ì›”ê¸‰ìˆ˜ì •ì „ ,salary - salary/10 ì›”ê¸‰ìˆ˜ì •í›„
+FROM employees;
+
+SELECT
+    first_name ì´ë¦„, last_name ì„± ,job_id ì§ì±…, salary ì›”ê¸‰ , (salary-1000)*0.05 ë³´ë„ˆìŠ¤
+FROM employees;
+
+-- distinct ì¤‘ë³µ ê°’ ì œê±°
+SELECT
+    DISTINCT job_id ì§ì±…
+FROM employees;
+
+-- ex1
+SELECT
+    employee_id,first_name, last_name
+FROM employees;
+
+-- ex2
+SELECT
+    first_name, salary, salary*1.1 ASë‰´ì…€ëŸ¬ë¦¬
+FROM employees;
+
+-- ex3
+SELECT
+    employee_id ì‚¬ì›ë²ˆí˜¸, first_name ì´ë¦„, last_name ì„±
+FROM employees;
+
+--ì—°ê²° ì—°ì‚°ì ||
+SELECT
+    first_name||' '|| last_name as full_name
 FROM employees;
