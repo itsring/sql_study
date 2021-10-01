@@ -72,3 +72,39 @@ SELECT
 FROM employees
 where MOD(employee_id,2)=0
 order by 1;
+
+--예제
+SELECT salary 월급 ,
+round(salary/30,0) 정수,
+round(salary/30,1) 첫째자리,
+round(salary/30,-1) "10의 자리" 
+from employees;
+
+---날짜형 함수
+SELECT
+    round(sysdate,'DD') 일,
+    round(sysdate,'MM') 월,
+    round(sysdate,'YYYY')년도,
+    round(MONTHS_BETWEEN('2021/10/01','1997/05/06'),0) 월차이,
+    ADD_MONTHS('2017/07/10',3) 애드먼쓰
+FROM dual;
+
+SELECT
+    sysdate -1 어제,
+    sysdate 오늘,
+    sysdate +1 내일,
+    sysdate -7 "일주일 전"
+FROM    dual;
+
+SELECT last_name, floor(sysdate - hire_date) 근무일수, department_id
+from employees
+where department_id >=90;
+
+
+SELECT employee_id, hire_date,
+    MONTHS_BETWEEN(SYSDATE,hire_date) 근무월수,
+    ADD_MONTHS(hire_date, 6) "6개월 추가",
+    NEXT_DAY(hire_date, '금요일' or 6) Next_day,
+    LAST_DAY(hire_date) Last_day
+FROM employees
+where MONTHS_BETWEEN(SYSDATE,hire_date) <150;
