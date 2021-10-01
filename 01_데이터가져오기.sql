@@ -57,5 +57,10 @@ FROM employees;
 
 --연결 연산자 ||
 SELECT
-    first_name||' '|| last_name as full_name
+    first_name||' '|| last_name as full_name , email ||'@company.com' email
 FROM employees;
+
+DESC employees;
+
+DESC departments;
+
