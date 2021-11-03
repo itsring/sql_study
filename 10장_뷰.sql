@@ -10,7 +10,7 @@ FROM employees;
 SELECT * FROM emp_v1;
 
 -- 테이블 삭제(정리)
-DROP TABLE 학생;
+DROP table 학생;
 
 -- 뷰에 데이터를 입력(실제 테이블이 아니기 때문에 실제로는 테이블에 입력)
 INSERT INTO EMP_V1(직원번호,이름,성,이메일,고용일,직종)

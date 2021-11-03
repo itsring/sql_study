@@ -26,12 +26,14 @@ SELECT * FROM members WHERE last_name = 'Harse';
 
 -- 저장된 실행보고서를 읽기
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY());
-
--- 인덱스 만들기
 CREATE INDEX members_last_name_i ON members(last_name);
-    
+-- 인덱스 만들기
+CREATE INDEX IDX_EMP_SAL ON EMP(SAL);
 -- 인덱스 삭제 
-DROP INDEX members_last_name_i;
+DROP INDEX IDX_EMP_SAL;
+SELECT *
+FROM USER_IND_COLUMNS
+WHERE TABLE_NAME = 'EMP';
 
 
 -- 멀티 인덱스 만들기

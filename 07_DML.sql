@@ -68,7 +68,6 @@ ROLLBACK;
 -- 게임부서를 생성하고 commit
 commit;
 
-
 -- 자동 커밋 설정 확인
 show autocommit;
 -- ON 실행시에 자동으로 commit됨

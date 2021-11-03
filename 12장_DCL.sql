@@ -26,7 +26,8 @@ DROP TABLESPACE johnSpace;
 --※자주 쓰는 내용※ / 계정에 비밀번호 변경
 --SCOTT계정 비밀번호 변경
 ALTER USER scott IDENTIFIED BY "tiger";
-
+--SCOTT 계정에 뷰 생성 권한 부여
+GRANT CREATE VIEW TO SCOTT;
 --현재 오라클 서버의 포트번호를 확인
 SELECT
 dbms_xdb.gethttpport() from dual;

@@ -38,11 +38,6 @@ FROM employees WHERE department_id = 80;
 DESC emp80;
 SELECT * FROM emp80;
 
-CREATE TABLE EMP80
-AS
-SELECT employee_id 직원번호, last_name 이름, salary 월급, salary*12 연봉, hire_date 고용일 
-FROM employees WHERE department_id = 80;
-
 -- 예제
 CREATE TABLE stmans
 AS
@@ -50,6 +45,7 @@ SELECT employee_id ID, job_id JOB, salary SAL
 FROM employees WHERE job_id = 'ST_MAN';
 
 SELECT * FROM stmans;
+
 
 
 
